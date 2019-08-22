@@ -1,0 +1,7 @@
+<!-- ... -->
+<launch>
+  <node pkg="camera_calibration" type="cameracalibrator.py" name="camera_calibration" output="screen" args="--size 10x9 --square 0.07 --no-service-check true" >
+    <remap from="left"   to="stereo/left/image_raw"/>
+  </node>
+
+</launch>

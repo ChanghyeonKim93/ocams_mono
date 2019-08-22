@@ -3,7 +3,7 @@
 
   <include file="$(find ocams_mono)/launch/ocams_mono_ros.launch" />
 
-  <node pkg="camera_calibration" type="cameracalibrator.py" name="camera_calibration" output="screen" args="--size 9x8 --square 0.06 --no-service-check true" >
+  <node pkg="camera_calibration" type="cameracalibrator.py" name="camera_calibration" output="screen" args="--size 9x8 --square 0.07 --no-service-check true" >
     <remap from="left"   to="stereo/left/image_raw"/>
     <remap from="right"  to="stereo/right/image_raw"/>
   </node>

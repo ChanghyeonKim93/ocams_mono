@@ -5,9 +5,9 @@
 
   <node pkg="ocams_mono" type="ocams_mono" name="ocams_mono" output="screen">
     <param name="resolution"    value="2"/> <!-- 0: 1280x960, 1: 1280x720, 2: 640x480, 3: 640x360 -->
-    <param name="frame_rate"    value="20"/> <!-- 20~45 -->
-    <param name="exposure"      value="45"/> <!-- 40~50 -->
-    <param name="gain"          value="10"/> <!-- under 100. 70 is recommended -->
+    <param name="frame_rate"    value="10"/> <!-- 20~45 -->
+    <param name="exposure"      value="70"/> <!-- 40~50 -->
+    <param name="gain"          value="100"/> <!-- under 100. 70 is recommended -->
     <param name="wb_blue"       value="130"/> <!-- 130 -->
     <param name="wb_red"        value="110"/> <!-- 110 -->
     <param name="auto_exposure" value="false"/>
