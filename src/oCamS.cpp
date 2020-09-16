@@ -13,7 +13,7 @@
 #include <tf/transform_broadcaster.h>
 #include <tf/transform_datatypes.h>
 #include <dynamic_reconfigure/server.h>
-#include <ocams/camConfig.h>
+#include <ocams_mono/camConfig.h>
 #include <boost/thread.hpp>
 
 #include "withrobot_camera.hpp"
@@ -189,8 +189,8 @@ private:
 
     void device_poll() {
         //Reconfigure confidence
-        dynamic_reconfigure::Server<ocams::camConfig> server;
-        dynamic_reconfigure::Server<ocams::camConfig>::CallbackType f;
+        dynamic_reconfigure::Server<ocams_mono::camConfig> server;
+        dynamic_reconfigure::Server<ocams_mono::camConfig>::CallbackType f;
         f = boost::bind(&oCamStereoROS::callback, this ,_1, _2);
         server.setCallback(f);
 
@@ -276,7 +276,7 @@ private:
         }
     }
 
-    void callback(ocams::camConfig &config, uint32_t level) {
+    void callback(ocams_mono::camConfig &config, uint32_t level) {
 //        ROS_INFO("exposure:%d, gain:%d, blue:%d, red:%d, ae:%d", config.exposure, config.gain, config.wb_blue, config.wb_red, config.auto_exposure);
         ocams->uvc_control(config.exposure, config.gain, config.wb_blue, config.wb_red, config.auto_exposure);
     }
